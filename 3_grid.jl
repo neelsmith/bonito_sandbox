@@ -9,7 +9,6 @@ end
 
 function gridded(button, clicks)
     sidebar = demoCard(
-        #"SIDEBAR",
         button,
         style = Styles(
             "grid-column" =>  "1",
@@ -18,7 +17,6 @@ function gridded(button, clicks)
     )
 
     header = demoCard(
-        #"HEADER",
         Bonito.Label(clicks),
         style = Styles(
             "grid-column" =>  "2",
@@ -27,7 +25,7 @@ function gridded(button, clicks)
     )
 
     main = demoCard(
-        "MAIN",
+        "Text content",
         style = Styles(
             "grid-column" =>  "2",
             "grid-row" =>  "2",
