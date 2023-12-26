@@ -3,12 +3,15 @@ using Bonito, Observables
 # web browser:
 Bonito.browser_display()
 
-# Use an `Observable` to bridge Julia dn JS:
+ 
+# Use an `Observable` to bridge Julia and Javascript.
 app2 = App() do
-    color = Observable("red")
+    color = Observable("black")
     on(println, color)
     button = DOM.div("click me", onclick=js"""(e)=> {
-        const color = '#' + ((1<<24)*Math.random() | 0).toString(16)
+        const colorlist = ['black', 'red', 'green', 'blue']       ;
+        let idx = Math.floor(Math.random() * 4);
+        const color = colorlist[idx]
         console.log(color)
         $(color).notify(color)
     }""")
