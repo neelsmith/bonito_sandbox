@@ -48,12 +48,12 @@ button = Button("Bump counter")
 clicks = Observable(0)
 g = gridded(button, clicks)
 
-app3b = App() do session
+app3 = App() do session
     on(session, button.value) do bool
         clicks[] = clicks[] + 1
     end
     return(g)
 end
 
-display(app3b)
+display(app3)
 
